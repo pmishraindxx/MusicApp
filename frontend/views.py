@@ -8,7 +8,6 @@ from audio_base.serializers import *
 # Create your views here.
 def songsList(request):
     url = requests.get('http://127.0.0.1:8000/backend/api_view_songs/', None)
-      
     out = (json.loads(url.text))
     if type(out)!=list:
         if not out.get('info_data')!=None:

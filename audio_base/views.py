@@ -17,7 +17,6 @@ class UploadSong(APIView):
         for fileItem in song:
             Song.objects.create(mp3file = fileItem, title=title, artist=artist, album=album)
         info_data = 'Song Uploaded!'
-        print(info_data)
         return Response(info_data)
 
 class ViewSongs(APIView):
@@ -46,7 +45,6 @@ class ViewSearch(APIView):
         all_songs = Song.objects.filter(Q(title__icontains=your_search_query) | Q(album__icontains=your_search_query) | Q(artist__icontains=your_search_query))
         if all_songs:
             serializer = SongSerializer(all_songs, many=True)
-            print(serializer.data)
             return Response(serializer.data)
         else:
             return Response({'info-data':'No Songs found!'})
@@ -57,6 +55,3 @@ class DeleteSong(APIView):
         song_id = request.data.get("song_id")
         Song.objects.get(id=song_id).delete()
         return Response({'info-data':'Song deleted!'})
-        
-
-

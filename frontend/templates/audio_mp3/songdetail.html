@@ -1,0 +1,32 @@
+{% extends "audio_mp3/base.html" %}
+{% load static %}
+{% block page_content %}
+<div style="text-align: center;">
+    <h4>Song Specific Page</h4>
+</div>
+<a href="/" > Go to Home</a>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Title: {{ song.title}} </h5>
+                <h5 class="card-title">Artist:  {{song.artist}} </h5>
+                <h5 class="card-title">Album: {{song.album}}</h5>
+                
+                
+
+                <audio controls >
+                    <source src={{ song.mp3file }} type="audio/mpeg">
+                </audio>
+
+                <a href={{ song.mp3file }} download> Download</a>
+                
+                    
+                <button type="submit" onclick="deletesong({{song.id}})"> Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    
+

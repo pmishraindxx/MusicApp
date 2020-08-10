@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "audio_mp3/base.html" %}
+{% load static %}
+{% block page_content %}
+<h1 style="text-align: center;">Upload Song</h1>
+
+<label for="title">Title</label><br>
+  <input type="text" id="title" name="title"><br>
+
+  <label for="artist">Artist</label><br>
+  <input type="text" id="artist" name="artist"><br>
+
+  <label for="album">Album</label><br>
+  <input type="text" id="album" name="album"><br>
+
+<label>Select Song</label> <br>
+<input class="custom-select2" type="file" id="attach" name="attach"><br>
+<button type="button" id="mysubmitbtn" onclick="uploadsong()" class="btn btn-primary btnsubmit">Upload</button><br>
+
+{% endblock %}

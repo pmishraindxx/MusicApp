@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "audio_mp3/base.html" %}
+{% load static %}
+{% block page_content %}
+<h1 style="text-align: center;">Songs Application</h1>
+<input type="text" placeholder="Search.." id="search_term"><br>
+<button type="submit" onclick="searchquery();">Submit</button>
+<a href="upload_song">Upload Song</a>
+<br>
+    <h4>No Songs Uploaded yet!</h4>
+    
+{% endblock %}

@@ -6,6 +6,8 @@ Frontend app consumes RESTAPIs and renders the details in HTML templates
 
 Database used: PostgreSQL
 
+Python version used: 3.2.2 64-Bit on Windows system
+
 Please run:
 
 python manage.py makemigrations

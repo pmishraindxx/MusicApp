@@ -19,3 +19,6 @@ python manage.py runserver runs the application on local server
 http://localhost:8000/ will load the application.
 
 
+I have also made a screen video of the working application which can be found under the folder
+
+
